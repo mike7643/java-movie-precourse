@@ -1,8 +1,8 @@
 package domain;
 
 public class Movie {
-    private String title;
-    private long runningTime;
+    private final String title;
+    private final long runningTime;
 
     public Movie(String title, long runningTime) {
         this.title = title;
