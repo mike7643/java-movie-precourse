@@ -1,15 +1,21 @@
 package domain;
 
 public class User {
-    private final String id;
+
+    private final long id;
+    private final String nickname;
     private long point =1000; //신규 회원 포인트 1000으로 설정함.
 
-    public User(String id) {
+    public User(long id, String nickname) {
         this.id = id;
+        this.nickname = nickname;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
+    }
+    public String getNickname() {
+        return nickname;
     }
     public Long getPoint() {
         return point;
@@ -17,7 +23,7 @@ public class User {
 
     public void addPoint(long addPoint){
         if (addPoint < 100) { // 최소 100포인트 이상 적립하도록 설정함.
-            throw new IllegalArgumentException("최소 적립 포인트 100 이상 이어야 한다");
+            throw new IllegalArgumentException("최소 적립 포인트 100 이상 이어야 한다.");
         }
         this.point += addPoint;
     }
