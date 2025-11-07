@@ -78,6 +78,26 @@ test(domain): User, PaymentMethod, Reservation 등 기타 도메인 생성 테�
 
 
 ### 가격 계산 로직 정의 및 테스트
+feat(policy): 할인 정책(DiscountPolicy) 인터페이스 정의
+
+feat(policy): 무비데이 할인(MovieDayDiscountPolicy) 구현
+
+feat(policy): 시간 할인(TimeDiscountPolicy) 구현
+
+test(policy): 할인 정책(MovieDay, Time) 단위 테스트
+
+feat(service): 가격 계산기(PriceCalculator) 서비스 정의 및 기본 가격 합산
+
+test(service): PriceCalculator 기본 가격 합산 테스트
+
+feat(service): PriceCalculator 할인 순서(비율->정액) 적용 로직 구현
+
+test(service): PriceCalculator 할인 순서 적용 테스트
+
+feat(service): PriceCalculator 포인트 및 결제수단 할인 적용 로직 구현
+
+test(service): PriceCalculator 최종 가격(포인트, 결제수단 포함) 통합 테스트
+
 
 ### 예매 로직/검증 및 동시성 테스트
 
