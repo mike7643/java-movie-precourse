@@ -24,12 +24,12 @@ public class Screening {
         return startDayTime;
     }
 
-    boolean isMovieDay(){
+    public boolean isMovieDay(){
         int dayOfMonth = startDayTime.getDayOfMonth();
         return dayOfMonth == 10 || dayOfMonth == 20 || dayOfMonth == 30;
     }
 
-    boolean isDiscountTime(){
+    public boolean isDiscountTime(){
         return startDayTime.getHour() < 11 || startDayTime.getHour() >= 20;
     }
 }
