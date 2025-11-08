@@ -52,4 +52,10 @@ public class InMemoryReservationRepository implements ReservationRepository {
         }
         return result;
     }
+
+    //테스트 용
+    public void clearStore() {
+        store.clear();
+        sequence.set(0L);
+    }
 }

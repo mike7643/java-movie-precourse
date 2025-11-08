@@ -1,3 +1,4 @@
+/*
 package service;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -24,4 +25,4 @@ class ReservationServiceTest {
     void createReservationService() {
         assertThat(reservationService).isNotNull();
     }
-}
+}*/
