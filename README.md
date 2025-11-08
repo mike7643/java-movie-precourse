@@ -100,5 +100,24 @@ test(service): PriceCalculator 최종 가격(포인트, 결제수단 포함) 통
 
 
 ### 예매 로직/검증 및 동시성 테스트
+feat(repository): 예매(Reservation) 리포지토리 인터페이스 정의
 
-추후 추가하며 진행하겠습니다.
+feat(service): 예매 서비스(ReservationService) 정의 (예매 생성/조회/취소 뼈대)
+
+test(service): ReservationService 생성 테스트
+
+feat(validate): 여러 상영 간 시간 겹침 검증 로직 구현 (ScreeningOverlapValidator)
+
+test(validate): 시간이 겹치는 상영 목록 예매 시 예외 발생 테스트
+
+feat(validate): 특정 상영(Screening)의 기 예약 좌석 검증 로직 구현
+
+test(validate): 기 예약된 좌석(Seat) 선택 시 예외 발생 테스트
+
+feat(service): 예매(Reservation) 생성 비즈니스 로직 통합
+
+    (시간 겹침 검증 -> 좌석 중복 검증 -> PriceCalculator 가격 계산 -> Reservation 객체 생성 및 저장)
+
+test(service): 예매 생성 통합 테스트 (단일/다중 상영 건)
+
+test(concurrent): 동일 좌석 동시 예매 요청 시 동시성 제어 테스트
