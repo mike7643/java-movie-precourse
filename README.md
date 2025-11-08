@@ -100,7 +100,7 @@ test(service): PriceCalculator 최종 가격(포인트, 결제수단 포함) 통
 
 
 ### 예매 로직/검증 및 동시성 테스트
-feat(repository): 예매(Reservation) 리포지토리 인터페이스 정의
+feat(repository): 예매(Reservation) 리포지토리 인터페이스 및 InMemory 리포지토리 구현
 
 feat(service): 예매 서비스(ReservationService) 정의 (예매 생성/조회/취소 뼈대)
 

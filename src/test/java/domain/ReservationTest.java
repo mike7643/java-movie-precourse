@@ -37,7 +37,6 @@ class ReservationTest {
     @DisplayName("Reservation 객체가 모든 값을 전달받아 정상적으로 생성된다.")
     void createReservationAndVerifyGetters() {
 
-        LocalDateTime localDateTime = LocalDateTime.of(2025, 1, 1, 1, 1);
 
         Reservation reservation = new Reservation(
                 testUser,
@@ -45,8 +44,7 @@ class ReservationTest {
                 testSeats,
                 testPayment,
                 testUsedPoint,
-                testFinalPrice,
-                localDateTime
+                testFinalPrice
         );
 
         assertThat(reservation).isNotNull();

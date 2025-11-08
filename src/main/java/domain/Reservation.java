@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Reservation {
 
+    private long id;
     private final User user;
     private final Screening screening;
     private final List<Seat> selectedSeats;
@@ -13,7 +14,7 @@ public class Reservation {
     private final int finalPrice;
     private final LocalDateTime reservationDateTime;
 
-    public Reservation(User user, Screening screening, List<Seat> selectedSeats, Payment payment, long usedPoint, int finalPrice,  LocalDateTime reservationDateTime) {
+    public Reservation(User user, Screening screening, List<Seat> selectedSeats, Payment payment, long usedPoint, int finalPrice) {
         this.user = user;
         this.screening = screening;
         this.selectedSeats = selectedSeats;
@@ -23,6 +24,12 @@ public class Reservation {
         this.reservationDateTime = LocalDateTime.now();
     }
 
+    public long getId() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
+    }
     public User getUser() {
         return user;
     }
