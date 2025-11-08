@@ -16,6 +16,4 @@ public interface ReservationRepository {
     List<Reservation> findByScreening(Screening screening);
 
     List<Reservation> findByUser(User user);
-
-    void deleteById(Long id);
 }

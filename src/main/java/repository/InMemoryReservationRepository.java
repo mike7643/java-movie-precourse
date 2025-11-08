@@ -52,9 +52,4 @@ public class InMemoryReservationRepository implements ReservationRepository {
         }
         return result;
     }
-
-    @Override
-    public void deleteById(Long id) {
-        store.remove(id);
-    }
 }
